@@ -36,10 +36,12 @@ linear-gradient(180deg,#ba7b7d 0%,#c8898b 68%,#c38384 100%)}
 .hero-stats{display:none!important}
 
 .phone-stage{position:absolute;z-index:4;left:0;right:0;bottom:0;height:43%;pointer-events:none}
-.phone{background:#f8f6f4;border:2px solid rgba(255,255,255,.9);box-shadow:0 22px 38px rgba(73,44,44,.24);overflow:hidden;border-radius:34px}
+.phone{background:#171412;border:2px solid rgba(255,255,255,.9);box-shadow:0 22px 38px rgba(73,44,44,.24);overflow:hidden;border-radius:34px}
 .phone.a{width:176px;height:350px;left:25%;top:10px;transform:rotate(-11deg);animation:phoneFloatA 5.8s ease-in-out infinite alternate}
 .phone.b{width:168px;height:334px;right:25%;top:0;transform:rotate(7deg);animation:phoneFloatB 6.4s ease-in-out infinite alternate}
-.live-phone iframe{position:absolute;inset:0;width:560px;height:100svh;border:0;transform-origin:top left;transform:scale(.31);pointer-events:none;background:#fff}
+.live-phone iframe{position:absolute;top:0;left:0;width:560px;height:1130px;border:0;transform-origin:top left;pointer-events:none;background:#171412}
+.phone.a iframe{transform:scale(.314)}
+.phone.b iframe{transform:scale(.296)}
 @keyframes phoneFloatA{to{transform:rotate(-9deg) translateY(-7px)}}
 @keyframes phoneFloatB{to{transform:rotate(5deg) translateY(-5px)}}
 .float-card{display:none!important}
@@ -67,7 +69,8 @@ linear-gradient(180deg,#ba7b7d 0%,#c8898b 68%,#c38384 100%)}
   .phone-stage{height:42%;bottom:0}
   .phone.a{width:156px;height:312px;left:20%;top:10px}
   .phone.b{width:148px;height:296px;right:18%;top:0}
-  .live-phone iframe{transform:scale(.275)}
+  .phone.a iframe{transform:scale(.2785)}
+  .phone.b iframe{transform:scale(.264)}
   #fitur{padding-top:68px}#fitur .section-head .eyebrow{font-size:31px}
 }
 
@@ -76,5 +79,6 @@ linear-gradient(180deg,#ba7b7d 0%,#c8898b 68%,#c38384 100%)}
   .hero-title-stage{height:86px}
   .hero h1{font-size:29px}
   .phone.a{left:16%;width:145px;height:290px}.phone.b{right:14%;width:140px;height:280px}
-  .live-phone iframe{transform:scale(.255)}
+  .phone.a iframe{transform:scale(.259)}
+  .phone.b iframe{transform:scale(.25)}
 }
