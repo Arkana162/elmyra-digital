@@ -1,16 +1,24 @@
-const words = ["mudah", "cepat", "indah", "berkesan"];
-let wordIndex = 0;
-const rotator = document.getElementById("rotator");
+const heroHeadlines = [
+  "Spesialis Undangan Digital",
+  "Elegan & Terjangkau",
+  "Interaktif & Berkesan"
+];
+let heroHeadlineIndex = 0;
+const heroHeadline = document.getElementById("heroHeadline");
 
-if (rotator) {
+if (heroHeadline) {
   setInterval(() => {
-    rotator.classList.add("swap");
+    heroHeadline.classList.add("headline-out");
+
     setTimeout(() => {
-      wordIndex = (wordIndex + 1) % words.length;
-      rotator.textContent = words[wordIndex];
-      rotator.classList.remove("swap");
-    }, 280);
-  }, 2200);
+      heroHeadlineIndex = (heroHeadlineIndex + 1) % heroHeadlines.length;
+      heroHeadline.textContent = heroHeadlines[heroHeadlineIndex];
+      heroHeadline.classList.remove("headline-out");
+      heroHeadline.classList.remove("headline-in");
+      void heroHeadline.offsetWidth;
+      heroHeadline.classList.add("headline-in");
+    }, 420);
+  }, 2800);
 }
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -35,9 +43,9 @@ document.querySelectorAll(".tab").forEach((tab) => {
 });
 
 // =========================================================
-// LIVE TEMPLATE PREVIEW DI DALAM MOCKUP HANDPHONE
-// iframe tetap memuat undangan HTML asli sehingga animasinya hidup,
-// tetapi diperkecil seperti layar HP agar katalog lebih rapi.
+// LIVE TEMPLATE PREVIEW — LAYAR HANDPHONE BESAR
+// Template asli tetap hidup di dalam iframe, tetapi area preview
+// sekarang hampir memenuhi lebar kartu agar desain mudah dinilai.
 // =========================================================
 const catalogCards = document.querySelector("#katalog .cards");
 
@@ -45,23 +53,24 @@ if (catalogCards) {
   const previewStyle = document.createElement("style");
   previewStyle.textContent = `
     .live-template-preview{
-      height:390px;
+      min-height:610px;
       position:relative;
       overflow:hidden;
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(145deg,#eee3d7,#d8c3ae);
+      padding:20px 16px 24px;
+      background:linear-gradient(145deg,#f1e7dc,#dcc8b4);
       isolation:isolate;
     }
     .live-template-preview::after{
       content:"LIVE PREVIEW";
       position:absolute;
-      top:14px;
-      left:14px;
-      z-index:6;
+      top:16px;
+      left:16px;
+      z-index:7;
       padding:7px 10px;
-      background:rgba(255,250,244,.94);
+      background:rgba(255,250,244,.95);
       color:#6e5848;
       font-size:9px;
       letter-spacing:.15em;
@@ -71,25 +80,24 @@ if (catalogCards) {
     }
     .phone-preview-shell{
       position:relative;
-      width:190px;
-      height:365px;
-      padding:8px;
-      border-radius:34px;
+      width:min(88%,320px);
+      aspect-ratio:9/19.5;
+      padding:9px;
+      border-radius:42px;
       background:#171412;
-      box-shadow:0 24px 45px rgba(54,40,31,.28);
-      transform:rotate(-2deg);
+      box-shadow:0 28px 55px rgba(54,40,31,.30);
       animation:phonePreviewFloat 5.5s ease-in-out infinite alternate;
       z-index:2;
     }
     .phone-preview-shell::before{
       content:"";
       position:absolute;
-      top:8px;
+      top:9px;
       left:50%;
       transform:translateX(-50%);
-      width:62px;
-      height:13px;
-      border-radius:0 0 10px 10px;
+      width:78px;
+      height:17px;
+      border-radius:0 0 12px 12px;
       background:#171412;
       z-index:5;
     }
@@ -97,7 +105,7 @@ if (catalogCards) {
       position:relative;
       width:100%;
       height:100%;
-      border-radius:27px;
+      border-radius:33px;
       overflow:hidden;
       background:#2e251f;
     }
@@ -106,43 +114,44 @@ if (catalogCards) {
       top:0;
       left:0;
       width:560px;
-      height:1000px;
+      height:1180px;
       border:0;
       pointer-events:none;
       background:#2e251f;
-      transform:scale(.31);
+      transform:scale(.54);
       transform-origin:top left;
     }
     .preview-shadow-phone{
       position:absolute;
-      width:210px;
-      height:28px;
-      bottom:4px;
+      width:72%;
+      max-width:340px;
+      height:30px;
+      bottom:8px;
       border-radius:50%;
       background:rgba(70,50,36,.16);
-      filter:blur(9px);
+      filter:blur(10px);
       z-index:1;
     }
     .live-template-preview .preview-glow{
       position:absolute;
       inset:-15%;
       pointer-events:none;
-      background:radial-gradient(circle at 50% 40%,rgba(255,250,240,.55),transparent 48%);
+      background:radial-gradient(circle at 50% 38%,rgba(255,250,240,.62),transparent 48%);
       animation:catalogGlow 5s ease-in-out infinite alternate;
       z-index:0;
     }
     @keyframes phonePreviewFloat{
-      from{transform:rotate(-2deg) translateY(3px)}
-      to{transform:rotate(1deg) translateY(-7px)}
+      from{transform:translateY(4px)}
+      to{transform:translateY(-8px)}
     }
     @keyframes catalogGlow{
       from{opacity:.55;transform:scale(.97)}
       to{opacity:1;transform:scale(1.04)}
     }
     @media(max-width:420px){
-      .live-template-preview{height:360px}
-      .phone-preview-shell{width:176px;height:338px}
-      .phone-preview-screen iframe{transform:scale(.286)}
+      .live-template-preview{min-height:560px;padding-left:12px;padding-right:12px}
+      .phone-preview-shell{width:min(90%,292px)}
+      .phone-preview-screen iframe{transform:scale(.49)}
     }
   `;
   document.head.appendChild(previewStyle);
