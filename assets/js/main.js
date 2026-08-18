@@ -35,38 +35,80 @@ document.querySelectorAll(".tab").forEach((tab) => {
 });
 
 // =========================================================
-// TEMPLATE KATALOG AKTIF
-// Template 02 menggunakan cover asli dari assets/template02.
-// Tambahkan template baru dengan pola yang sama di sini.
+// LIVE TEMPLATE PREVIEW DI KATALOG
+// Bukan foto statis: iframe memuat undangan HTML asli sehingga
+// animasi cover/background Template 02 ikut bergerak di kartu katalog.
 // =========================================================
 const catalogCards = document.querySelector("#katalog .cards");
 
 if (catalogCards) {
+  const previewStyle = document.createElement("style");
+  previewStyle.textContent = `
+    .live-template-preview{
+      height:330px;
+      position:relative;
+      overflow:hidden;
+      background:#2e251f;
+      isolation:isolate;
+    }
+    .live-template-preview::after{
+      content:"LIVE PREVIEW";
+      position:absolute;
+      top:14px;
+      left:14px;
+      z-index:4;
+      padding:7px 10px;
+      background:rgba(255,250,244,.92);
+      color:#6e5848;
+      font-size:9px;
+      letter-spacing:.15em;
+      font-weight:800;
+      border-radius:999px;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
+    }
+    .live-template-preview iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      pointer-events:none;
+      background:#2e251f;
+      transform:scale(1.015);
+      animation:catalogPreviewFloat 6s ease-in-out infinite alternate;
+    }
+    .live-template-preview .preview-glow{
+      position:absolute;
+      z-index:3;
+      inset:auto -25% -36% -25%;
+      height:55%;
+      pointer-events:none;
+      background:radial-gradient(ellipse,rgba(255,238,216,.22),transparent 66%);
+      animation:catalogGlow 5s ease-in-out infinite alternate;
+    }
+    @keyframes catalogPreviewFloat{
+      from{transform:scale(1.015) translateY(0)}
+      to{transform:scale(1.04) translateY(-3px)}
+    }
+    @keyframes catalogGlow{
+      from{opacity:.45;transform:translateX(-3%)}
+      to{opacity:.9;transform:translateX(3%)}
+    }
+  `;
+  document.head.appendChild(previewStyle);
+
   const template02 = document.createElement("article");
   template02.className = "card show";
   template02.innerHTML = `
     <div class="ribbon">TERBARU</div>
-    <div class="thumb" style="
-      height:320px;
-      padding:0;
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(180deg,rgba(37,30,25,.02) 40%,rgba(37,30,25,.72) 100%),
-        url('assets/template02/cover.jpg') center/cover no-repeat;
-    ">
-      <div style="
-        position:absolute;
-        left:18px;
-        right:18px;
-        bottom:18px;
-        color:#fff;
-        text-align:left;
-        text-shadow:0 2px 10px rgba(0,0,0,.35);
-      ">
-        <div style="font-size:10px;letter-spacing:.22em;font-weight:700;">SPECIAL PHOTO</div>
-        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;line-height:1.05;margin-top:7px;">Warm Editorial</div>
-      </div>
+    <div class="live-template-preview" aria-label="Preview animasi Template 02">
+      <iframe
+        src="/undangan/template-02/"
+        title="Preview Template 02 Warm Editorial"
+        loading="lazy"
+        tabindex="-1"
+        aria-hidden="true"></iframe>
+      <div class="preview-glow"></div>
     </div>
     <div class="card-body">
       <h3>TEMPLATE 02 — WARM EDITORIAL</h3>
