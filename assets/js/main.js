@@ -34,6 +34,51 @@ document.querySelectorAll(".tab").forEach((tab) => {
   });
 });
 
+// =========================================================
+// TEMPLATE KATALOG AKTIF
+// Template 02 menggunakan cover asli dari assets/template02.
+// Tambahkan template baru dengan pola yang sama di sini.
+// =========================================================
+const catalogCards = document.querySelector("#katalog .cards");
+
+if (catalogCards) {
+  const template02 = document.createElement("article");
+  template02.className = "card show";
+  template02.innerHTML = `
+    <div class="ribbon">TERBARU</div>
+    <div class="thumb" style="
+      height:320px;
+      padding:0;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg,rgba(37,30,25,.02) 40%,rgba(37,30,25,.72) 100%),
+        url('assets/template02/cover.jpg') center/cover no-repeat;
+    ">
+      <div style="
+        position:absolute;
+        left:18px;
+        right:18px;
+        bottom:18px;
+        color:#fff;
+        text-align:left;
+        text-shadow:0 2px 10px rgba(0,0,0,.35);
+      ">
+        <div style="font-size:10px;letter-spacing:.22em;font-weight:700;">SPECIAL PHOTO</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;line-height:1.05;margin-top:7px;">Warm Editorial</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>TEMPLATE 02 — WARM EDITORIAL</h3>
+      <div class="old">Rp 199.000</div>
+      <div class="price">Rp 129.000</div>
+      <a class="btn" href="/undangan/template-02/" target="_blank" rel="noopener noreferrer">Lihat Undangan</a>
+    </div>
+  `;
+
+  catalogCards.prepend(template02);
+}
+
 const whatsappNumber = "6289616992224";
 const whatsappMessage = "Halo Elmyra Digital, saya ingin bertanya tentang undangan pernikahan digital.";
 
