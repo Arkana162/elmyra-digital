@@ -34,7 +34,7 @@ document.querySelectorAll(".tab").forEach((tab) => {
   });
 });
 
-const whatsappNumber = "6281234567890";
+const whatsappNumber = "6289616992224";
 const whatsappMessage = "Halo Elmyra Digital, saya ingin bertanya tentang undangan pernikahan digital.";
 
 document.querySelectorAll(".wa-link").forEach((link) => {
