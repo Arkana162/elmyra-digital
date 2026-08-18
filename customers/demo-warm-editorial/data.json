@@ -1,0 +1,38 @@
+{
+  "slug": "demo-warm-editorial",
+  "template": "template-02",
+  "permanent": true,
+  "activeUntil": "2099-12-31T23:59:59+07:00",
+  "couple": {
+    "groom": "Raka",
+    "bride": "Alya",
+    "groomParents": "Putra dari Bapak Ahmad & Ibu Sari",
+    "brideParents": "Putri dari Bapak Hendra & Ibu Maya"
+  },
+  "dateDisplay": "20 · 12 · 2026",
+  "eventDate": "2026-12-20T08:00:00+07:00",
+  "events": {
+    "akad": "20 Desember 2026\n08.00 – 10.00 WIB",
+    "resepsi": "20 Desember 2026\n11.00 – 15.00 WIB"
+  },
+  "location": {
+    "name": "Gedung Pernikahan",
+    "address": "Alamat lengkap acara pelanggan",
+    "mapsUrl": "https://maps.google.com"
+  },
+  "gift": {
+    "bank": "BCA",
+    "account": "1234567890",
+    "name": "Raka"
+  },
+  "assets": {
+    "cover": "/assets/template02/cover.jpg",
+    "gallery1": "/assets/template02/gallery1.jpg",
+    "gallery2": "/assets/template02/gallery2.jpg",
+    "gallery3": "/assets/template02/gallery3.jpg",
+    "gallery4": "/assets/template02/gallery4.jpg",
+    "gallery5": "/assets/template02/gallery5.jpg",
+    "gallery6": "/assets/template02/gallery6.jpg",
+    "music": "/assets/template02/music.mp3"
+  }
+}
