@@ -35,9 +35,9 @@ document.querySelectorAll(".tab").forEach((tab) => {
 });
 
 // =========================================================
-// LIVE TEMPLATE PREVIEW DI KATALOG
-// Bukan foto statis: iframe memuat undangan HTML asli sehingga
-// animasi cover/background Template 02 ikut bergerak di kartu katalog.
+// LIVE TEMPLATE PREVIEW DI DALAM MOCKUP HANDPHONE
+// iframe tetap memuat undangan HTML asli sehingga animasinya hidup,
+// tetapi diperkecil seperti layar HP agar katalog lebih rapi.
 // =========================================================
 const catalogCards = document.querySelector("#katalog .cards");
 
@@ -45,10 +45,13 @@ if (catalogCards) {
   const previewStyle = document.createElement("style");
   previewStyle.textContent = `
     .live-template-preview{
-      height:330px;
+      height:390px;
       position:relative;
       overflow:hidden;
-      background:#2e251f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(145deg,#eee3d7,#d8c3ae);
       isolation:isolate;
     }
     .live-template-preview::after{
@@ -56,9 +59,9 @@ if (catalogCards) {
       position:absolute;
       top:14px;
       left:14px;
-      z-index:4;
+      z-index:6;
       padding:7px 10px;
-      background:rgba(255,250,244,.92);
+      background:rgba(255,250,244,.94);
       color:#6e5848;
       font-size:9px;
       letter-spacing:.15em;
@@ -66,33 +69,80 @@ if (catalogCards) {
       border-radius:999px;
       box-shadow:0 6px 18px rgba(0,0,0,.12);
     }
-    .live-template-preview iframe{
+    .phone-preview-shell{
+      position:relative;
+      width:190px;
+      height:365px;
+      padding:8px;
+      border-radius:34px;
+      background:#171412;
+      box-shadow:0 24px 45px rgba(54,40,31,.28);
+      transform:rotate(-2deg);
+      animation:phonePreviewFloat 5.5s ease-in-out infinite alternate;
+      z-index:2;
+    }
+    .phone-preview-shell::before{
+      content:"";
       position:absolute;
-      inset:0;
+      top:8px;
+      left:50%;
+      transform:translateX(-50%);
+      width:62px;
+      height:13px;
+      border-radius:0 0 10px 10px;
+      background:#171412;
+      z-index:5;
+    }
+    .phone-preview-screen{
+      position:relative;
       width:100%;
       height:100%;
+      border-radius:27px;
+      overflow:hidden;
+      background:#2e251f;
+    }
+    .phone-preview-screen iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:560px;
+      height:1000px;
       border:0;
       pointer-events:none;
       background:#2e251f;
-      transform:scale(1.015);
-      animation:catalogPreviewFloat 6s ease-in-out infinite alternate;
+      transform:scale(.31);
+      transform-origin:top left;
+    }
+    .preview-shadow-phone{
+      position:absolute;
+      width:210px;
+      height:28px;
+      bottom:4px;
+      border-radius:50%;
+      background:rgba(70,50,36,.16);
+      filter:blur(9px);
+      z-index:1;
     }
     .live-template-preview .preview-glow{
       position:absolute;
-      z-index:3;
-      inset:auto -25% -36% -25%;
-      height:55%;
+      inset:-15%;
       pointer-events:none;
-      background:radial-gradient(ellipse,rgba(255,238,216,.22),transparent 66%);
+      background:radial-gradient(circle at 50% 40%,rgba(255,250,240,.55),transparent 48%);
       animation:catalogGlow 5s ease-in-out infinite alternate;
+      z-index:0;
     }
-    @keyframes catalogPreviewFloat{
-      from{transform:scale(1.015) translateY(0)}
-      to{transform:scale(1.04) translateY(-3px)}
+    @keyframes phonePreviewFloat{
+      from{transform:rotate(-2deg) translateY(3px)}
+      to{transform:rotate(1deg) translateY(-7px)}
     }
     @keyframes catalogGlow{
-      from{opacity:.45;transform:translateX(-3%)}
-      to{opacity:.9;transform:translateX(3%)}
+      from{opacity:.55;transform:scale(.97)}
+      to{opacity:1;transform:scale(1.04)}
+    }
+    @media(max-width:420px){
+      .live-template-preview{height:360px}
+      .phone-preview-shell{width:176px;height:338px}
+      .phone-preview-screen iframe{transform:scale(.286)}
     }
   `;
   document.head.appendChild(previewStyle);
@@ -101,14 +151,19 @@ if (catalogCards) {
   template02.className = "card show";
   template02.innerHTML = `
     <div class="ribbon">TERBARU</div>
-    <div class="live-template-preview" aria-label="Preview animasi Template 02">
-      <iframe
-        src="/undangan/template-02/"
-        title="Preview Template 02 Warm Editorial"
-        loading="lazy"
-        tabindex="-1"
-        aria-hidden="true"></iframe>
+    <div class="live-template-preview" aria-label="Preview animasi Template 02 dalam layar handphone">
       <div class="preview-glow"></div>
+      <div class="preview-shadow-phone"></div>
+      <div class="phone-preview-shell">
+        <div class="phone-preview-screen">
+          <iframe
+            src="/undangan/template-02/"
+            title="Preview Template 02 Warm Editorial"
+            loading="lazy"
+            tabindex="-1"
+            aria-hidden="true"></iframe>
+        </div>
+      </div>
     </div>
     <div class="card-body">
       <h3>TEMPLATE 02 — WARM EDITORIAL</h3>
