@@ -47,13 +47,26 @@ linear-gradient(180deg,#ba7b7d 0%,#c8898b 68%,#c38384 100%)}
 .float-card{display:none!important}
 .marquee{display:none!important}
 
-#fitur{padding-top:74px;background:#fff8ee}
+/* FITUR — running icon ticker, bukan daftar kartu */
+#fitur{padding:64px 0 54px;background:#fff8ee;overflow:hidden}
 #fitur::before{display:none}
-#fitur .section-head{margin-bottom:36px}
+#fitur .container{max-width:none;width:100%;padding:0}
+#fitur .section-head{padding:0 24px;margin:0 auto 22px;max-width:760px;text-align:center}
 #fitur .section-head .eyebrow{display:block;color:var(--ref-rose-dark);font-size:clamp(27px,4.6vw,38px);letter-spacing:-.02em;text-transform:none;font-weight:800}
 #fitur .section-head h2{display:none}
-#fitur .section-head p{margin-top:22px;color:#6e6662;font-size:16px}
-.features{margin-top:28px}
+#fitur .section-head p{display:none!important}
+.features{position:relative!important;height:150px!important;margin:14px 0 0!important;overflow:hidden!important;display:block!important;width:100%!important;max-width:none!important}
+.feature{position:absolute!important;left:100%!important;top:8px!important;width:116px!important;min-width:116px!important;height:132px!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;text-align:center!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;animation:featureTicker 18s linear infinite!important;opacity:1!important;transform:none!important}
+.feature:nth-child(1){animation-delay:-15s!important}
+.feature:nth-child(2){animation-delay:-12s!important}
+.feature:nth-child(3){animation-delay:-9s!important}
+.feature:nth-child(4){animation-delay:-6s!important}
+.feature:nth-child(5){animation-delay:-3s!important}
+.feature:nth-child(6){animation-delay:0s!important}
+.feature .icon{width:74px!important;height:74px!important;min-width:74px!important;border-radius:50%!important;display:grid!important;place-items:center!important;margin:0!important;background:linear-gradient(145deg,#fff6ee,#f2d7d8)!important;border:1px solid rgba(170,110,112,.22)!important;box-shadow:0 10px 24px rgba(126,79,79,.10)!important;color:var(--ref-rose-dark)!important;font-size:27px!important;line-height:1!important}
+.feature h3{margin:0!important;font-family:"DM Sans",sans-serif!important;font-size:13px!important;line-height:1.2!important;font-weight:800!important;color:#745457!important;white-space:nowrap!important}
+.feature p{display:none!important}
+@keyframes featureTicker{from{transform:translateX(0)}to{transform:translateX(calc(-100vw - 150px))}}
 
 @media(max-width:620px){
   .nav-inner{height:96px;padding:18px 18px 0}
@@ -71,7 +84,12 @@ linear-gradient(180deg,#ba7b7d 0%,#c8898b 68%,#c38384 100%)}
   .phone.b{width:148px;height:296px;right:18%;top:0}
   .phone.a iframe{transform:scale(.2785)}
   .phone.b iframe{transform:scale(.264)}
-  #fitur{padding-top:68px}#fitur .section-head .eyebrow{font-size:31px}
+  #fitur{padding-top:58px;padding-bottom:44px}
+  #fitur .section-head .eyebrow{font-size:31px}
+  .features{height:138px!important}
+  .feature{width:106px!important;min-width:106px!important;height:124px!important}
+  .feature .icon{width:68px!important;height:68px!important;min-width:68px!important;font-size:24px!important}
+  .feature h3{font-size:12px!important}
 }
 
 @media(max-width:390px){
