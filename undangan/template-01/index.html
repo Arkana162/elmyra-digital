@@ -3,73 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#efe6d9">
+<meta name="theme-color" content="#efe7db">
 <title>Nama Pria & Nama Wanita — Elmyra Digital</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=DM+Sans:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Noto+Naskh+Arabic:wght@500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#f8f1e7; --paper:#fffaf1; --ink:#283126; --muted:#736e66;
-  --gold:#b78a43; --gold2:#d6b36f; --sage:#526450; --deep:#2f4030;
-  --pink:#dca8a0; --line:#d9c3a4; --shadow:0 20px 60px rgba(39,43,31,.18);
+  --cream:#f8f1e7; --paper:#fffaf2; --ink:#263329; --muted:#756d62;
+  --gold:#b78a43; --gold2:#d7b56e; --sage:#566b57; --deep:#314833;
+  --rose:#d9aaa3; --peach:#edcfc2; --line:#dcc7a8;
+  --shadow:0 24px 70px rgba(36,45,33,.18);
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:
-radial-gradient(circle at 10% 10%,rgba(255,255,255,.5),transparent 25%),
-linear-gradient(180deg,#d8d1c4,#b9b8ad 40%,#9fa89a);overflow-x:hidden}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:#aeb3aa}
 body:before{content:"";position:fixed;inset:0;z-index:-2;background:
-url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=75') center/cover;filter:blur(7px) saturate(.85);transform:scale(1.05)}
-body:after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(29,38,29,.46)}
-main{width:min(100%,520px);margin:auto;background:var(--cream);box-shadow:0 0 80px rgba(0,0,0,.25);min-height:100vh;overflow:hidden}
-h1,h2,h3{font-family:'Cormorant Garamond',serif}
-.script{font-family:'Great Vibes',cursive}
+linear-gradient(rgba(31,41,31,.28),rgba(31,41,31,.42)),
+url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80') center/cover;filter:blur(7px);transform:scale(1.05)}
+main{width:min(100%,560px);margin:auto;background:var(--cream);min-height:100vh;box-shadow:0 0 90px rgba(0,0,0,.28);overflow:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif}.script{font-family:'Great Vibes',cursive}
 section{position:relative;padding:72px 22px}
-.frame{position:relative;background:rgba(255,250,241,.97);border:1.5px solid var(--gold);border-radius:36px 36px 24px 24px;padding:28px 20px;box-shadow:inset 0 0 0 6px rgba(183,138,67,.08),var(--shadow)}
-.frame:before,.frame:after{content:"✦";position:absolute;left:50%;transform:translateX(-50%);color:var(--gold);background:var(--paper);padding:0 8px}
-.frame:before{top:-10px}.frame:after{bottom:-10px}
-.floral-top,.floral-bottom{position:absolute;left:0;right:0;height:190px;pointer-events:none;opacity:.95;background:
-radial-gradient(circle at 10% 65%,#e8c7bd 0 10px,transparent 11px),
-radial-gradient(circle at 18% 50%,#f3dfd4 0 14px,transparent 15px),
-radial-gradient(circle at 88% 55%,#e4b8b1 0 12px,transparent 13px),
-radial-gradient(circle at 78% 40%,#f0ded4 0 16px,transparent 17px),
-linear-gradient(25deg,transparent 0 40%,rgba(87,112,76,.35) 41% 45%,transparent 46%),
-linear-gradient(-25deg,transparent 0 40%,rgba(87,112,76,.35) 41% 45%,transparent 46%)}
-.floral-top{top:-10px}.floral-bottom{bottom:-20px;transform:rotate(180deg)}
-.eyebrow{text-align:center;letter-spacing:.22em;font-size:11px;font-weight:700;color:var(--gold)}
-.hero{min-height:100svh;display:grid;place-items:center;padding:34px 18px 42px;background:
-radial-gradient(circle at 50% 35%,rgba(255,255,255,.96),rgba(247,239,227,.92) 52%,rgba(232,220,202,.92) 100%)}
-.hero-card{width:100%;min-height:86svh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:42px 24px 34px;border:2px solid var(--gold);border-radius:90px 90px 28px 28px;position:relative;background:
-linear-gradient(rgba(255,250,241,.86),rgba(255,250,241,.9)),
-url('https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=80') center/cover}
-.hero-card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(183,138,67,.55);border-radius:82px 82px 22px 22px}
-.monogram{width:72px;height:72px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;font-family:'Cormorant Garamond';font-size:26px;background:rgba(255,255,255,.72)}
-.hero h1{font-family:'Great Vibes';font-size:76px;line-height:.8;margin:18px 0 8px;font-weight:400;color:#30402f;position:relative}
-.hero .amp{color:var(--gold);font-size:.8em}
-.hero .date{font-family:'Cormorant Garamond';font-weight:700;letter-spacing:.23em;font-size:20px;margin:18px 0}
-.tap{margin:24px auto 0;border:1px solid var(--gold);background:var(--deep);color:#fff;border-radius:999px;padding:13px 22px;font-weight:700;position:relative;z-index:2}
-.scrollhint{font-size:12px;color:#7a6c59;margin-top:14px}
-.peacocks{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;margin:12px -8px -8px}
-.peacock{width:42%;aspect-ratio:3/4;border-radius:50% 50% 10px 10px;background:
-radial-gradient(circle at 55% 18%,#2b5f68 0 10%,transparent 11%),
-radial-gradient(ellipse at center,#315b58 0 20%,#b88d4d 21% 25%,#273a34 26% 28%,transparent 29%) 0 0/34px 34px,
-linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,72% 38%,88% 100%,12% 100%,30% 42%,42% 28%)}
-.intro{text-align:center}
-.intro h2{font-size:38px;margin:8px 0 16px}.intro p{color:var(--muted);line-height:1.8;margin:0}
-.quran{background:linear-gradient(180deg,#334232,#243224);color:#fff}.quran .frame{background:rgba(255,250,241,.97);color:var(--ink)}
-.arabic{font-family:'Noto Naskh Arabic';font-size:31px;line-height:1.9;text-align:center;margin:18px 0;color:#2f3c2f}
-.translation{text-align:center;color:#6f665d;line-height:1.75;font-family:'Cormorant Garamond';font-size:19px}
-.couple{display:grid;gap:18px}.person{text-align:center}.portrait{aspect-ratio:4/5;border-radius:110px 110px 26px 26px;overflow:hidden;border:1.5px solid var(--gold);padding:6px;background:#fff;box-shadow:var(--shadow)}.portrait img{width:100%;height:100%;object-fit:cover;border-radius:104px 104px 20px 20px}
-.person h3{font-family:'Great Vibes';font-size:54px;font-weight:400;margin:14px 0 4px}.person p{color:var(--muted);line-height:1.65;margin:0}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}.count{background:var(--deep);color:#fff;border:1px solid var(--gold2);border-radius:14px;padding:14px 4px;box-shadow:0 8px 18px rgba(33,50,33,.18)}.count strong{font-family:'Cormorant Garamond';font-size:30px;display:block}.count span{font-size:10px;color:#e9dfcf}
-.events{display:grid;gap:14px}.event{background:#fffaf4;border:1px solid var(--line);border-radius:22px;padding:20px;text-align:center}.event h3{font-size:30px;margin:0 0 8px}.event p{color:var(--muted);line-height:1.7;margin:0 0 14px}.btn{display:inline-block;text-decoration:none;color:#fff;background:var(--deep);border-radius:999px;padding:12px 18px;font-weight:700}
-.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:10px}.gallery div{overflow:hidden;border-radius:18px;border:1px solid #e7d3b8;background:#ddd;min-height:190px}.gallery div:first-child{grid-row:span 2;min-height:390px}.gallery img{width:100%;height:100%;object-fit:cover}
-.rsvp{display:grid;gap:12px}.rsvp input,.rsvp select,.rsvp textarea{width:100%;padding:14px;border:1px solid var(--line);border-radius:13px;font:inherit;background:#fff}.rsvp button{border:0;background:var(--deep);color:#fff;padding:14px;border-radius:999px;font-weight:700}
-.gift{display:grid;gap:12px}.bank{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.bank strong{font-family:'Cormorant Garamond';font-size:24px}.copy{margin-top:10px;border:1px solid var(--gold);background:#f6ede0;border-radius:999px;padding:9px 14px;font-weight:700}
-.closing{text-align:center;background:linear-gradient(180deg,#fffaf1,#efe2d1);padding-bottom:100px}.closing h2{font-family:'Great Vibes';font-size:58px;font-weight:400;margin:8px 0}.closing p{color:var(--muted);line-height:1.75}
-.music{position:fixed;z-index:20;right:max(16px,calc((100vw - 520px)/2 + 16px));bottom:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:var(--deep);color:#fff;box-shadow:var(--shadow)}
-.reveal{opacity:0;transform:translateY(18px);transition:.75s}.reveal.show{opacity:1;transform:none}
-@media(min-width:680px){.couple{grid-template-columns:1fr 1fr}.hero{padding-top:40px}.hero-card{min-height:800px}}
+.ornate{position:relative;background:rgba(255,250,242,.97);border:1.5px solid var(--gold);border-radius:34px;padding:30px 22px;box-shadow:inset 0 0 0 6px rgba(183,138,67,.07),var(--shadow)}
+.ornate:before,.ornate:after{content:"✦";position:absolute;left:50%;transform:translateX(-50%);color:var(--gold);background:var(--paper);padding:0 9px;font-size:16px}
+.ornate:before{top:-11px}.ornate:after{bottom:-11px}
+.eyebrow{text-align:center;letter-spacing:.2em;font-size:11px;font-weight:700;color:var(--gold)}
+.botanical{position:absolute;pointer-events:none;opacity:.95;filter:drop-shadow(0 6px 10px rgba(66,73,51,.1))}
+.botanical.tl,.botanical.tr{top:0;width:145px;height:210px}
+.botanical.bl,.botanical.br{bottom:0;width:160px;height:220px}
+.botanical.tl,.botanical.bl{left:-20px}.botanical.tr,.botanical.br{right:-20px;transform:scaleX(-1)}
+.leaf{position:absolute;width:46px;height:18px;border-radius:100% 0 100% 0;background:linear-gradient(90deg,#71836d,#9aa58e);transform-origin:left center}
+.flower{position:absolute;width:42px;height:42px;border-radius:50%;background:
+radial-gradient(circle at 50% 50%,#f6e2d8 0 16%,#dcaea7 17% 37%,#f3d7ca 38% 59%,transparent 60%)}
+.botanical .leaf:nth-child(1){left:18px;top:25px;transform:rotate(28deg)}
+.botanical .leaf:nth-child(2){left:50px;top:55px;transform:rotate(50deg) scale(.9)}
+.botanical .leaf:nth-child(3){left:24px;top:92px;transform:rotate(10deg) scale(.85)}
+.botanical .leaf:nth-child(4){left:68px;top:120px;transform:rotate(65deg) scale(.8)}
+.botanical .flower:nth-child(5){left:48px;top:22px}
+.botanical .flower:nth-child(6){left:12px;top:118px;transform:scale(.75)}
+.botanical .flower:nth-child(7){left:80px;top:92px;transform:scale(.6)}
+.hero{min-height:100svh;display:grid;place-items:center;padding:24px 14px 34px;background:
+linear-gradient(rgba(250,245,236,.78),rgba(245,235,223,.88)),
+url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1100&q=80') center/cover}
+.hero-shell{width:100%;min-height:92svh;position:relative;border:2px solid var(--gold);border-radius:96px 96px 28px 28px;background:rgba(255,250,242,.88);padding:42px 22px 26px;text-align:center;overflow:hidden;box-shadow:var(--shadow)}
+.hero-shell:before{content:"";position:absolute;inset:8px;border:1px solid rgba(183,138,67,.55);border-radius:87px 87px 22px 22px;pointer-events:none}
+.hero-shell:after{content:"";position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);width:220px;height:120px;border-radius:50%;background:
+radial-gradient(circle at center,#d7b56e 0 10px,#a8834c 11px 13px,#cab28d 14px 20px,transparent 21px),
+radial-gradient(ellipse at center,#d9cab2 0 42%,#b2946f 43% 47%,#e8dcc9 48% 57%,transparent 58%);opacity:.85}
+.monogram{width:74px;height:74px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;background:rgba(255,255,255,.7);font-family:'Playfair Display';font-size:24px}
+.hero h1{font-family:'Great Vibes';font-weight:400;font-size:80px;line-height:.78;margin:16px 0 14px;color:#2d4633;position:relative;z-index:1}
+.hero .amp{color:var(--gold);font-size:.8em}.hero .date{font-family:'Playfair Display';font-size:21px;font-weight:700;letter-spacing:.22em;margin:18px 0}
+.openbtn{position:relative;z-index:2;margin:20px auto 0;border:1px solid var(--gold);background:var(--deep);color:#fff;border-radius:999px;padding:13px 22px;font-weight:700}
+.hint{font-size:12px;color:#7a7064;margin-top:12px}
+.peacock-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px;padding:0 6px 40px}
+.peacock{position:relative;width:42%;height:220px}
+.peacock .body{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:74px;height:135px;border-radius:50% 50% 35% 35%;background:linear-gradient(#245d67,#183d45 55%,#a07d45 56% 100%);border:2px solid #c59c58;z-index:2}
+.peacock .neck{position:absolute;bottom:115px;left:50%;transform:translateX(-50%);width:30px;height:85px;border-radius:50% 50% 30% 30%;background:linear-gradient(#246676,#1d4d56);z-index:3}
+.peacock .head{position:absolute;bottom:185px;left:50%;transform:translateX(-50%);width:36px;height:34px;border-radius:50%;background:#275f68;z-index:4}
+.peacock .tail{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:145px;height:190px;border-radius:50% 50% 10px 10px;background:
+radial-gradient(circle,#c8984f 0 6px,#214d51 7px 11px,#b48b4d 12px 15px,transparent 16px) 0 0/38px 38px,
+linear-gradient(#355f59,#203f3f);clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.96}
+.peacock.right{transform:scaleX(-1)}
+.intro{text-align:center}.intro h2{font-size:35px;margin:10px 0 16px}.intro p{color:var(--muted);line-height:1.85;margin:0}
+.quran{background:linear-gradient(180deg,#364834,#263427);color:#fff}.quran .ornate{background:rgba(255,250,242,.98);color:var(--ink)}
+.arabic{font-family:'Noto Naskh Arabic';font-size:31px;line-height:1.95;text-align:center;margin:18px 0;color:#2d3a2d}
+.translation{text-align:center;color:#665f56;line-height:1.75;font-family:'Playfair Display';font-size:16px}
+.couple{display:grid;gap:20px}.person{text-align:center}.portrait{aspect-ratio:4/5;border-radius:120px 120px 28px 28px;overflow:hidden;border:1.5px solid var(--gold);padding:6px;background:#fff;box-shadow:var(--shadow)}
+.portrait img{width:100%;height:100%;object-fit:cover;border-radius:114px 114px 22px 22px}.person h3{font-family:'Great Vibes';font-size:56px;font-weight:400;margin:14px 0 2px}.person p{color:var(--muted);line-height:1.65;margin:0}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}.count{background:var(--deep);border:1px solid var(--gold2);color:#fff;border-radius:12px;padding:14px 3px;box-shadow:0 8px 20px rgba(43,60,44,.16)}
+.count strong{display:block;font-family:'Playfair Display';font-size:28px}.count span{font-size:10px;color:#eadfcd}
+.event-list{display:grid;gap:14px;margin-top:20px}.event{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;text-align:center}.event h3{font-size:27px;margin:0 0 8px}.event p{color:var(--muted);line-height:1.7;margin:0}
+.mapbox{text-align:center}.mapbox .venue{aspect-ratio:16/10;border-radius:20px;border:1px solid var(--line);overflow:hidden;margin:16px 0;background:
+linear-gradient(rgba(255,250,242,.1),rgba(255,250,242,.1)),
+url('https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=1000&q=80') center/cover}
+.btn{display:inline-block;text-decoration:none;background:var(--deep);color:#fff;border-radius:999px;padding:12px 18px;font-weight:700}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gallery .photo-card{background:#fff;padding:8px;border-radius:8px;box-shadow:0 12px 28px rgba(49,45,37,.13);transform:rotate(-2deg)}
+.gallery .photo-card:nth-child(2){transform:rotate(3deg)}.gallery .photo-card:nth-child(3){transform:rotate(2deg)}.gallery .photo-card:nth-child(4){transform:rotate(-3deg)}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.rsvp{display:grid;gap:12px}.rsvp input,.rsvp select,.rsvp textarea{width:100%;padding:14px;border:1px solid var(--line);border-radius:13px;background:#fff;font:inherit}.rsvp button{border:0;background:var(--deep);color:#fff;padding:14px;border-radius:999px;font-weight:700}
+.wish{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.wish strong{display:block}.wish small{color:var(--muted)}
+.gift{display:grid;gap:12px}.bank{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}.copy{margin-top:10px;border:1px solid var(--gold);background:#f4eadc;border-radius:999px;padding:9px 13px;font-weight:700}
+.closing{text-align:center;background:linear-gradient(180deg,#fffaf2,#eee1cf);padding-bottom:100px}.closing h2{font-family:'Great Vibes';font-size:60px;font-weight:400;margin:8px 0}.closing p{color:var(--muted);line-height:1.75}
+.music{position:fixed;right:max(16px,calc((100vw - 560px)/2 + 16px));bottom:18px;z-index:30;width:50px;height:50px;border-radius:50%;border:1px solid var(--gold);background:var(--deep);color:#fff;box-shadow:var(--shadow)}
+.reveal{opacity:0;transform:translateY(20px);transition:.75s}.reveal.show{opacity:1;transform:none}
+@media(min-width:700px){.couple{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -77,21 +93,27 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
 <button class="music" id="musicBtn">♫</button>
 <audio id="music" loop></audio>
 
-<section class="hero" id="top">
-  <div class="hero-card">
+<section class="hero">
+  <div class="hero-shell">
+    <div class="botanical tl"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div></div>
+    <div class="botanical tr"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div></div>
     <div class="monogram">S | M</div>
     <div class="eyebrow">THE WEDDING OF</div>
     <h1>Nama Pria <span class="amp">&</span><br>Nama Wanita</h1>
     <div class="date">DD · MM · YYYY</div>
-    <button class="tap" id="openBtn">Buka Undangan</button>
-    <div class="scrollhint">Tekan lalu gulir ke bawah ↓</div>
-    <div class="peacocks"><div class="peacock"></div><div class="peacock" style="transform:scaleX(-1)"></div></div>
+    <button class="openbtn" id="openBtn">Buka Undangan</button>
+    <div class="hint">Ketuk lalu gulir ke bawah ↓</div>
+    <div class="peacock-row">
+      <div class="peacock"><div class="tail"></div><div class="body"></div><div class="neck"></div><div class="head"></div></div>
+      <div class="peacock right"><div class="tail"></div><div class="body"></div><div class="neck"></div><div class="head"></div></div>
+    </div>
   </div>
 </section>
 
 <section class="intro">
-  <div class="floral-top"></div>
-  <div class="frame reveal">
+  <div class="botanical tl"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div></div>
+  <div class="botanical br"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div></div>
+  <div class="ornate reveal">
     <div class="eyebrow">BISMILLAHIRRAHMANIRRAHIM</div>
     <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
     <p>Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
@@ -99,10 +121,10 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
 </section>
 
 <section class="quran">
-  <div class="frame reveal">
+  <div class="ornate reveal">
     <div class="eyebrow">QS. AR-RUM : 21</div>
     <div class="arabic" dir="rtl">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</div>
-    <p class="translation">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.”</p>
+    <p class="translation">Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.</p>
   </div>
 </section>
 
@@ -124,16 +146,16 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
 </section>
 
 <section>
-  <div class="frame reveal">
+  <div class="ornate reveal">
     <div class="eyebrow">WAKTU ACARA</div>
-    <h2 style="text-align:center;font-size:40px;margin:8px 0">Menuju Hari Bahagia</h2>
+    <h2 style="text-align:center;font-size:40px;margin:8px 0 4px">Menuju Hari Bahagia</h2>
     <div class="countdown">
       <div class="count"><strong id="d">00</strong><span>Hari</span></div>
       <div class="count"><strong id="h">00</strong><span>Jam</span></div>
       <div class="count"><strong id="m">00</strong><span>Menit</span></div>
       <div class="count"><strong id="s">00</strong><span>Detik</span></div>
     </div>
-    <div class="events" style="margin-top:18px">
+    <div class="event-list">
       <div class="event"><h3>Akad Nikah</h3><p><strong>Hari, Tanggal Bulan Tahun</strong><br>08.00 – 10.00 WIB</p></div>
       <div class="event"><h3>Resepsi</h3><p><strong>Hari, Tanggal Bulan Tahun</strong><br>11.00 – 15.00 WIB</p></div>
     </div>
@@ -141,11 +163,12 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
 </section>
 
 <section>
-  <div class="frame reveal">
+  <div class="ornate mapbox reveal">
     <div class="eyebrow">LOKASI ACARA</div>
-    <h2 style="text-align:center;font-size:40px;margin:8px 0 12px">Perumahan Mutiara Sampurna</h2>
-    <p style="text-align:center;color:var(--muted);line-height:1.75">J37Q+X35, Jayasampurna, Kec. Serang Baru, Kabupaten Bekasi, Jawa Barat 17330</p>
-    <div style="text-align:center"><a class="btn" href="https://maps.google.com/?q=J37Q%2BX35%20Jayasampurna%20Bekasi" target="_blank">Buka Google Maps</a></div>
+    <h2 style="font-size:38px;margin:8px 0 4px">Perumahan Mutiara Sampurna</h2>
+    <div class="venue"></div>
+    <p style="color:var(--muted);line-height:1.7">J37Q+X35, Jayasampurna, Kec. Serang Baru, Kabupaten Bekasi, Jawa Barat 17330</p>
+    <a class="btn" href="https://maps.google.com/?q=J37Q%2BX35%20Jayasampurna%20Bekasi" target="_blank">Buka di Google Maps</a>
   </div>
 </section>
 
@@ -153,21 +176,22 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
   <div class="eyebrow">GALERI</div>
   <h2 style="text-align:center;font-size:42px;margin:8px 0 28px">Momen Kami</h2>
   <div class="gallery">
-    <div class="reveal"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"></div>
-    <div class="reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"></div>
-    <div class="reveal"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"></div>
+    <div class="photo-card reveal"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"></div>
+    <div class="photo-card reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"></div>
+    <div class="photo-card reveal"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"></div>
+    <div class="photo-card reveal"><img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=85"></div>
   </div>
 </section>
 
 <section>
-  <div class="frame reveal">
-    <div class="eyebrow">RSVP</div>
-    <h2 style="text-align:center;font-size:40px;margin:8px 0 18px">Konfirmasi Kehadiran</h2>
+  <div class="ornate reveal">
+    <div class="eyebrow">KONFIRMASI KEHADIRAN</div>
+    <h2 style="text-align:center;font-size:38px;margin:8px 0 18px">RSVP</h2>
     <form class="rsvp" id="rsvp">
-      <input id="rsvpName" placeholder="Nama lengkap" required>
-      <select id="rsvpCount"><option>1 orang</option><option>2 orang</option><option>3 orang</option><option>4 orang</option></select>
-      <select id="rsvpStatus"><option>InsyaAllah hadir</option><option>Tidak dapat hadir</option></select>
-      <textarea id="rsvpMsg" rows="4" placeholder="Ucapan & doa"></textarea>
+      <input id="name" placeholder="Nama lengkap" required>
+      <select id="count"><option>1 orang</option><option>2 orang</option><option>3 orang</option><option>4 orang</option></select>
+      <select id="status"><option>InsyaAllah hadir</option><option>Tidak dapat hadir</option></select>
+      <textarea id="msg" rows="4" placeholder="Ucapan & doa"></textarea>
       <button>Kirim Konfirmasi</button>
     </form>
     <div id="wishes" style="display:grid;gap:10px;margin-top:18px"></div>
@@ -175,13 +199,13 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
 </section>
 
 <section>
-  <div class="frame reveal">
+  <div class="ornate reveal">
     <div class="eyebrow">AMPLOP DIGITAL</div>
-    <h2 style="text-align:center;font-size:40px;margin:8px 0 10px">Tanda Kasih</h2>
+    <h2 style="text-align:center;font-size:38px;margin:8px 0 10px">Tanda Kasih</h2>
     <p style="text-align:center;color:var(--muted);line-height:1.7">Doa restu Anda merupakan hadiah terbaik. Namun jika berkenan memberikan tanda kasih, dapat melalui rekening berikut.</p>
     <div class="gift">
-      <div class="bank"><strong>BCA — <span id="bca">1234 5678 9012</span></strong><br>a.n. Nama Pria<br><button class="copy" onclick="copyText('bca',this)">Salin Nomor</button></div>
-      <div class="bank"><strong>BRI — <span id="bri">5678 9012 3456</span></strong><br>a.n. Nama Wanita<br><button class="copy" onclick="copyText('bri',this)">Salin Nomor</button></div>
+      <div class="bank"><strong>BCA — <span id="bca">1234 5678 9012</span></strong><br>a.n. Nama Pria<br><button class="copy" onclick="copyText('bca',this)">Salin</button></div>
+      <div class="bank"><strong>BRI — <span id="bri">5678 9012 3456</span></strong><br>a.n. Nama Wanita<br><button class="copy" onclick="copyText('bri',this)">Salin</button></div>
     </div>
   </div>
 </section>
@@ -190,9 +214,9 @@ linear-gradient(160deg,#315a54,#183d43);clip-path:polygon(47% 0,58% 10%,62% 25%,
   <div class="eyebrow">TERIMA KASIH</div>
   <h2>Samba & Mutia</h2>
   <p>Atas kehadiran, doa, dan restu Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih.</p>
-  <p style="margin-top:22px"><strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong></p>
+  <p><strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh</strong></p>
   <div class="monogram" style="margin-top:24px">S | M</div>
-  <small style="display:block;margin-top:24px;color:#8b7b68">Elmyra Digital</small>
+  <small style="display:block;margin-top:24px;color:#877967">Elmyra Digital</small>
 </section>
 </main>
 
@@ -210,10 +234,9 @@ openBtn.onclick=async()=>{document.querySelector('.intro').scrollIntoView({behav
 musicBtn.onclick=async()=>{if(!music.src)return alert('Musik belum dipasang.');if(playing){music.pause();playing=false}else{await music.play();playing=true}};
 
 function copyText(id,btn){navigator.clipboard.writeText(document.getElementById(id).textContent);btn.textContent='Tersalin ✓'}
-
 const key='elmyra-rsvp-samba-mutia';
-function drawWishes(){const arr=JSON.parse(localStorage.getItem(key)||'[]');wishes.innerHTML=arr.map(x=>`<div class="bank"><strong>${x.name}</strong><br><small>${x.status} · ${x.count}</small><p style="margin:8px 0 0;color:#71685f">${x.msg||'Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.'}</p></div>`).join('')}
-rsvp.onsubmit=e=>{e.preventDefault();const arr=JSON.parse(localStorage.getItem(key)||'[]');arr.unshift({name:rsvpName.value,count:rsvpCount.value,status:rsvpStatus.value,msg:rsvpMsg.value});localStorage.setItem(key,JSON.stringify(arr));drawWishes();e.target.reset();alert('Terima kasih, konfirmasi tersimpan di perangkat ini.')};drawWishes();
+function draw(){const arr=JSON.parse(localStorage.getItem(key)||'[]');wishes.innerHTML=arr.map(x=>`<div class="wish"><strong>${x.name}</strong><small>${x.status} · ${x.count}</small><p style="margin:8px 0 0;color:#6d675f">${x.msg||'Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.'}</p></div>`).join('')}
+rsvp.onsubmit=e=>{e.preventDefault();const arr=JSON.parse(localStorage.getItem(key)||'[]');arr.unshift({name:name.value,count:count.value,status:status.value,msg:msg.value});localStorage.setItem(key,JSON.stringify(arr));draw();e.target.reset();alert('Terima kasih, konfirmasi tersimpan di perangkat ini.')};draw();
 
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
