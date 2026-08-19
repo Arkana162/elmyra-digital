@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peacock Garden — Elmyra Digital</title>
+<style>
+:root{--ivory:#f5f2e8;--sage:#71805f;--dark:#27372c;--gold:#a48a52;--pink:#d9aaa0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#222;font-family:Georgia,serif;color:var(--dark)}
+.invite{max-width:560px;margin:auto;background:var(--sage);overflow:hidden}
+.cover{height:100svh;min-height:700px;position:relative;overflow:hidden;background:linear-gradient(#eef0e8,#e4e9dc 52%,#d2d9c9)}
+.card{position:absolute;z-index:3;top:4%;left:13%;right:13%;height:48%;background:rgba(248,246,238,.96);border:1px solid #b6a77a;border-radius:0 0 48% 48%/0 0 14% 14%;box-shadow:0 8px 28px #58604d18}
+.card:after{content:"";position:absolute;left:7%;right:7%;bottom:1px;height:35px;border-bottom:2px solid var(--gold);border-radius:0 0 50% 50%}
+.words{position:absolute;z-index:8;top:8%;left:10%;right:10%;text-align:center}
+.small{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.25em}
+.names{font-size:clamp(46px,13vw,72px);font-weight:400;line-height:.82;margin:17px 0}
+.names span{display:block}.amp{font-size:.45em;color:var(--gold);margin:9px}
+.date{letter-spacing:.24em;font-size:17px;margin-top:25px}
+.scroll{width:40px;height:76px;border:2px solid #70756b;border-radius:25px;margin:34px auto;position:relative}
+.scroll:after{content:"";width:5px;height:5px;background:#555;border-radius:50%;position:absolute;left:50%;top:15px;animation:scroll 1.6s infinite}
+@keyframes scroll{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,30px)}}
+.branch{position:absolute;z-index:2;width:210px;height:330px}
+.left{left:-55px;top:2%;animation:leftIn 1.4s both}.right{right:-55px;top:1%;transform:scaleX(-1);animation:rightIn 1.5s .1s both}.bottom{left:-25px;bottom:-45px;transform:rotate(-15deg) scale(1.3);animation:bottomIn 1.6s .2s both}
+.stem{position:absolute;left:90px;top:20px;width:3px;height:290px;background:#65725c;transform:rotate(18deg)}
+.leaf{position:absolute;width:62px;height:27px;background:#7d8e72;border-radius:100% 0 100% 0}
+.flower{position:absolute;width:64px;height:64px}
+.flower i{position:absolute;left:20px;top:6px;width:27px;height:42px;background:#e4bbb0;border-radius:70% 20% 70% 30%;transform-origin:50% 90%}
+.flower i:nth-child(2){transform:rotate(72deg)}.flower i:nth-child(3){transform:rotate(144deg)}.flower i:nth-child(4){transform:rotate(216deg)}.flower i:nth-child(5){transform:rotate(288deg)}
+.peacock{position:absolute;z-index:5;width:130px;height:220px;animation:birdIn 1.5s .35s both}
+.p1{right:-8px;top:14%}.p2{left:-12px;bottom:8%;transform:scale(.9) scaleX(-1)}
+.tail{position:absolute;bottom:0;width:120px;height:155px;border-radius:70% 25% 70% 30%;background:radial-gradient(circle,#b99c54 0 4px,#1f5953 5px 10px,transparent 11px) 0 0/42px 42px,linear-gradient(145deg,#3d766d,#718563)}
+.body{position:absolute;right:10px;top:47px;width:43px;height:91px;border-radius:60%;background:#214d4d;transform:rotate(-12deg)}
+.neck{position:absolute;right:7px;top:4px;width:22px;height:75px;border-radius:50%;background:#163f45}.head{position:absolute;right:1px;top:0;width:30px;height:30px;border-radius:50%;background:#163f45}.beak{position:absolute;right:-15px;top:11px;border-left:17px solid #ad8a50;border-top:5px solid transparent;border-bottom:5px solid transparent}
+@keyframes leftIn{from{opacity:0;transform:translate(-120px,-40px) rotate(-10deg)}to{opacity:1;transform:none}}
+@keyframes rightIn{from{opacity:0;transform:translate(120px,-40px) scaleX(-1) rotate(-10deg)}to{opacity:1;transform:scaleX(-1)}}
+@keyframes bottomIn{from{opacity:0;translate:0 150px}to{opacity:1;translate:0 0}}
+@keyframes birdIn{from{opacity:0;translate:90px 35px;rotate:8deg}to{opacity:1;translate:0 0;rotate:0}}
+.photoSec{min-height:100svh;padding:90px 22px 110px;display:flex;flex-direction:column;justify-content:center}
+.frame{padding:8px;border:3px solid #f6f7f1;border-radius:32px;background:#e8ece3;box-shadow:0 8px 20px #33402d55}
+.photo{aspect-ratio:16/10;border-radius:24px;overflow:hidden;background:#cbd3c4;display:grid;place-items:center;text-align:center;font-family:Arial,sans-serif;color:#4d5b49}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}.photo b{display:block;font:30px Georgia,serif;margin-bottom:6px}
+.brand{background:#fff;color:#222;padding:13px 38px;border-radius:999px;margin:90px auto 0;font-family:Arial,sans-serif;font-weight:bold}
+</style></head>
+<body><main class="invite">
+<section class="cover">
+<div class="branch left"><div class="stem"></div><div class="leaf" style="left:42px;top:105px;transform:rotate(-25deg)"></div><div class="leaf" style="left:95px;top:165px;transform:rotate(35deg)"></div><div class="flower" style="left:34px;top:36px"><i></i><i></i><i></i><i></i><i></i></div><div class="flower" style="left:98px;top:205px;transform:scale(.75)"><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="branch right"><div class="stem"></div><div class="leaf" style="left:42px;top:105px;transform:rotate(-25deg)"></div><div class="leaf" style="left:95px;top:165px;transform:rotate(35deg)"></div><div class="flower" style="left:34px;top:36px"><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="branch bottom"><div class="stem"></div><div class="leaf" style="left:45px;top:120px"></div><div class="flower" style="left:35px;top:70px"><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="peacock p1"><div class="tail"></div><div class="body"></div><div class="neck"></div><div class="head"><div class="beak"></div></div></div>
+<div class="peacock p2"><div class="tail"></div><div class="body"></div><div class="neck"></div><div class="head"><div class="beak"></div></div></div>
+<div class="card"></div>
+<div class="words"><div class="small">THE WEDDING OF</div><h1 class="names"><span id="woman">NAMA WANITA</span><span class="amp">&amp;</span><span id="man">NAMA PRIA</span></h1><div class="date" id="date">DD · MM · YYYY</div><div class="scroll" onclick="document.querySelector('.photoSec').scrollIntoView()"></div></div>
+</section>
+<section class="photoSec"><div class="frame"><div class="photo"><img id="pic"><div id="placeholder"><b>FOTO PENGANTIN</b>Ganti dengan foto customer</div></div></div><div class="brand">elmyradigital.my.id</div></section>
+</main>
+<script>
+const CUSTOMER={namaWanita:"NAMA WANITA",namaPria:"NAMA PRIA",tanggal:"DD · MM · YYYY",foto:""};
+woman.textContent=CUSTOMER.namaWanita;man.textContent=CUSTOMER.namaPria;date.textContent=CUSTOMER.tanggal;
+if(CUSTOMER.foto){pic.src=CUSTOMER.foto;pic.style.display="block";placeholder.style.display="none"}
+</script></body></html>
