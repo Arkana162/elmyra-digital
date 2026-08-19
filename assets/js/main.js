@@ -19,29 +19,28 @@ async function renderCatalog(){
    const preview=makeEl("div","live-template-preview");
    const shell=makeEl("div","phone-preview-shell");
    const screen=makeEl("div","phone-preview-screen");
-   const img=document.createElement("img");
-   img.src=item.thumbnail||"/assets/templates/default-preview.jpg";
-   img.alt=item.name||"Preview undangan";
-   img.onerror=()=>{img.src="/assets/templates/default-preview.jpg"};
-   screen.appendChild(img);
-   shell.appendChild(screen);
-   preview.appendChild(shell);
-   card.appendChild(preview);
+   if(item.thumbnail){
+    const img=document.createElement("img");
+    img.src=item.thumbnail;
+    img.alt=item.name||"Preview undangan";
+    img.onerror=()=>showFallback(screen,item.name);
+    screen.appendChild(img);
+   }else{
+    showFallback(screen,item.name);
+   }
+   shell.appendChild(screen);preview.appendChild(shell);card.appendChild(preview);
    const body=makeEl("div","card-body");
    body.appendChild(makeEl("h3","",item.name||"Undangan Digital"));
    const actions=makeEl("div","catalog-actions");
-   const view=makeEl("a","btn","Lihat Undangan");
-   view.href=item.demoUrl||item.demo||"#";
-   view.target="_blank";
-   const order=makeEl("a","order-btn","Pesan");
-   order.href=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(item.orderMessage||`Halo Elmyra Digital, saya ingin memesan desain ${item.name}.`)}`;
-   order.target="_blank";
-   actions.append(view,order);
-   body.appendChild(actions);
-   card.appendChild(body);
-   root.appendChild(card);
+   const view=makeEl("a","btn","Lihat Undangan");view.href=item.demoUrl||item.demo||"#";view.target="_blank";
+   const order=makeEl("a","order-btn","Pesan");order.href=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(item.orderMessage||`Halo Elmyra Digital, saya ingin memesan desain ${item.name}.`)}`;order.target="_blank";
+   actions.append(view,order);body.appendChild(actions);card.appendChild(body);root.appendChild(card);
   });
  }catch(e){console.error(e);root.textContent="Katalog belum tersedia";}
+}
+
+function showFallback(screen,name){
+ screen.innerHTML=`<div class="catalog-fallback"><small>ELMYRA DIGITAL</small><strong>${name||"UNDANGAN"}</strong><span>Preview Design</span><button>Buka Undangan</button></div>`;
 }
 renderCatalog();
 
