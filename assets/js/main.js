@@ -22,15 +22,24 @@ async function renderCatalog(){
    const img=document.createElement("img");
    img.src=item.thumbnail||"/assets/templates/default-preview.jpg";
    img.alt=item.name||"Preview undangan";
-   screen.appendChild(img);shell.appendChild(screen);preview.appendChild(shell);card.appendChild(preview);
+   img.onerror=()=>{img.src="/assets/templates/default-preview.jpg"};
+   screen.appendChild(img);
+   shell.appendChild(screen);
+   preview.appendChild(shell);
+   card.appendChild(preview);
    const body=makeEl("div","card-body");
    body.appendChild(makeEl("h3","",item.name||"Undangan Digital"));
    const actions=makeEl("div","catalog-actions");
-   const view=makeEl("a","btn","Lihat Undangan");view.href=item.demoUrl||"#";view.target="_blank";
+   const view=makeEl("a","btn","Lihat Undangan");
+   view.href=item.demoUrl||item.demo||"#";
+   view.target="_blank";
    const order=makeEl("a","order-btn","Pesan");
    order.href=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(item.orderMessage||`Halo Elmyra Digital, saya ingin memesan desain ${item.name}.`)}`;
    order.target="_blank";
-   actions.append(view,order);body.appendChild(actions);card.appendChild(body);root.appendChild(card);
+   actions.append(view,order);
+   body.appendChild(actions);
+   card.appendChild(body);
+   root.appendChild(card);
   });
  }catch(e){console.error(e);root.textContent="Katalog belum tersedia";}
 }
